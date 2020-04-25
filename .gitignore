@@ -1,0 +1,5 @@
+*.npy
+*.csv
+*.txt
+*.xml
+.idea/*

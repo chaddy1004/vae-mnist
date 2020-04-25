@@ -1,0 +1,26 @@
+---
+exp:
+  name: "vae_mnist"
+  experiment_dir: "/exps"
+data:
+  img_size: 27
+  latent_dim: 10
+  n_workers: 2
+model:
+  architecture: "VAE"
+  hyperparameters:
+    lr: 0.001
+    beta1: 0.5
+    beta2: 0.999
+    clipvalue: 0
+    clipnorm: 0
+trainer:
+  num_epochs: 150
+  train_batch_size: 128
+  test_batch_size: 10
+  use_lr_decay: false
+  save_checkpoint_freq: 1
+  keep_checkpoint_freq: 50
+  valid_freq: 10
+  n_gpus: 1
+  gpu_memory_fraction: 0.9
